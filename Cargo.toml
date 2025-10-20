@@ -4,12 +4,10 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-axum = "0.8.4"
-charts = "0.3.0"
 clap = { version = "4.5.47", features = ["derive"] }
-plotpy = "1.13.0"
-plotters = "0.3.7"
-rocket = "0.5.1"
 serde = { version = "1.0.225", features = ["derive"] }
 tokio = { version = "1.47.1", features = ["full"] }
-yew = "0.21.0"
+reqwest = { version = "0.11", features = ["blocking"] }
+scraper = "0.17"
+regex = "1.10"
+anyhow = "1.0"
