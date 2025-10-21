@@ -29,4 +29,9 @@ pub enum Commands {
         /// dnasequence or protein sequence
         sequence: String,
     },
+    /// align the sequences and prepare them for the tensor
+    TensorReady {
+        /// path to the reference sequence
+        refseq: String,
+    },
 }

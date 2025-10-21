@@ -6,7 +6,8 @@ Author Gaurav Sablok,
 Email: codeprog@icloud.com
 */
 
-pub fn prgdb_sequence_fetcher(
+#[tokio::main]
+pub async fn prgdb_sequence_fetcher(
     id: &str,
     arg_type: &str,
 ) -> Result<String, Box<dyn std::error::Error>> {

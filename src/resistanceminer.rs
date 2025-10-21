@@ -2,7 +2,13 @@ use regex::Regex;
 use reqwest::blocking::get;
 use scraper::{Html, Selector};
 
-pub fn mine_resistance_genes(id: &str) -> Result<String, Box<dyn std::error::Error>> {
+/*
+Author Gaurav Sablok,
+Email: codeprog@icloud.com
+*/
+
+#[tokio::main]
+pub async fn mine_resistance_genes(id: &str) -> Result<String, Box<dyn std::error::Error>> {
     let resistance_gene = id;
     let url = format!(
         "http://www.prgdb.org/prgdb/genes/type/reference/{}",

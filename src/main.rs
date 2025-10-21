@@ -2,9 +2,11 @@ mod args;
 use crate::args::CommandParse;
 use crate::args::Commands;
 use clap::Parser;
+mod resistancealignment;
 mod resistancefetcher;
 mod resistancelinear;
 mod resistanceminer;
+use crate::resistancealignment::alignment;
 use crate::resistancefetcher::prgdb_sequence_fetcher;
 use crate::resistanceminer::mine_resistance_genes;
 /*
@@ -22,6 +24,10 @@ fn main() {
         Commands::Miner { idstring } => {
             let genbank_id = mine_resistance_genes(idstring).unwrap();
             println!("Resistance gene GenBank ID: {}", genbank_id);
+        }
+        Commands::TensorReady { refseq } => {
+            let command = alignment(refseq).unwrap();
+            println!("The command has finished:{}", command);
         }
     }
 }
