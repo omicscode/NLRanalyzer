@@ -33,5 +33,14 @@ pub enum Commands {
     TensorReady {
         /// path to the reference sequence
         refseq: String,
+        /// path to the output file
+        outputfile: String,
+    },
+    /// locate NLR
+    NLRlocate {
+        /// path to the fasta file
+        pathfasta: String,
+        /// NLR motif to locate
+        locatenlr: String,
     },
 }

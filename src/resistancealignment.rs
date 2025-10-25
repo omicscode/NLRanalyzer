@@ -19,7 +19,7 @@ pub struct Mapper {
 }
 
 #[tokio::main]
-pub async fn alignment(pathref: &str, outputfile: &str) -> Result<String, Box<dyn Error>> {
+pub async fn alignment(pathref: &str, outputfilename: &str) -> Result<String, Box<dyn Error>> {
     let _ = Command::new("mafft")
         .arg("-")
         .arg("lnsi")
