@@ -1,9 +1,10 @@
 # NLRanalyzer
 
-- rust NLR analyzer which fetches and mines resistance genes
-- gives you a database of the NLR specific resistance genes
+- rust NLR analyzer which fetches and mines resistance genes.
 - aligns your resistance genes to in-hosted resistance genes from previously published studies.
+- implements a deep learning model based on the Neural Network to filter the alignment having the same sites and then use the expression labels and prediction of the sequences based on the expression.So an expression to sequences classifier using the libtorch.
 - python directory contains the python version.
+- libtorch should be present.
 
 ```
 cargo build

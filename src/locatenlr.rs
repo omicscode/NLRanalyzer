@@ -4,8 +4,8 @@ use std::io::{self, BufRead, BufReader};
 use std::path::Path;
 
 /*
-Gaurav Sablok
-codeprog@icloud.com
+Author Gaurav Sablok,
+Email: codeprog@icloud.com
 */
 
 #[derive(Debug, Clone)]

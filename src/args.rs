@@ -43,4 +43,13 @@ pub enum Commands {
         /// NLR motif to locate
         locatenlr: String,
     },
+    /// train NLR
+    TrainNLR {
+        /// path to the fasta file
+        fastafile: String,
+        ///
+        outputfile: String,
+        /// expression file
+        expressionfile: String,
+    },
 }

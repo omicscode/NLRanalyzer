@@ -4,11 +4,12 @@ use crate::args::Commands;
 use clap::Parser;
 mod locatenlr;
 mod resistancealignment;
+mod resistancedeep;
 mod resistancefetcher;
-mod resistancelinear;
 mod resistanceminer;
 use crate::locatenlr::repeat_locator_long_read;
 use crate::resistancealignment::alignment;
+use crate::resistancedeep::deeplearnalignment;
 use crate::resistancefetcher::prgdb_sequence_fetcher;
 use crate::resistanceminer::mine_resistance_genes;
 
@@ -56,6 +57,14 @@ fn main() {
                 Err(e) => eprintln!("Error: {}", e),
             }
             Ok(())
+        }
+        Commands::TrainNLR {
+            fastafile,
+            outputfile,
+            expressionfile,
+        } => {
+            let command = deeplearnalignment(fastafile, outputfile, expressionfile);
+            println!("The deep learning results have been written: {}", command);
         }
     }
 }
